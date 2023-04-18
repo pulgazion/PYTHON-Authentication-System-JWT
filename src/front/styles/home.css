@@ -1,7 +1,31 @@
-/*
-    home.css: This website contains selectors only used in home.css
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
-    All pages share the styles on index.css but you should create 
-    one more css for each page that will contain the selected used 
-    on that page only (the ones not reused in other pages).
-*/
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form-group.mb-3 {
+  margin-bottom: 0;
+  margin-top: 20px;
+}
+
+.container {
+  position: relative;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+body {
+  background: #76b852;
+  background: rgb(141, 194, 111);
+  background: linear-gradient(
+    90deg,
+    rgba(141, 194, 111, 1) 0%,
+    rgba(118, 184, 82, 1) 50%
+  );
+  font-family: "Roboto", sans-serif;
+}
