@@ -1,10 +1,11 @@
-import React, { useState, useContext } from "react";
-import { Button, Container, Jumbotron } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React, {  useContext } from "react";
 import { Link } from "react-router-dom";
-import "../../styles/home.css";
+import { Context } from "../store/appContext";
 import logoIntroUrl from "../../img/logointro.png"
+import "../../styles/home.css";
+
 export const Home = () => {
+  const { actions, store } = useContext(Context);
 
   return (
       <div className="App justify-content-center">
@@ -14,9 +15,13 @@ export const Home = () => {
             </p>
             <img src={logoIntroUrl}  width="350" height="300" alt="Logo de la página" />
             <div className="d-flex m-4">
-            <Link to="/signin">
-              <Button variant="primary" size="lg" className="m-2">Registrarse</Button>
-            </Link>
+            {!store.jwt_token ? (
+              <Link to="/signin">
+                  <button className="btn btn-primary">
+                      Registrarse
+                  </button>
+              </Link>
+          ) : null}
       </div>
       </div>
     );
