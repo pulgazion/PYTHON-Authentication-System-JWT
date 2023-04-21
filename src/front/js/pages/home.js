@@ -14,12 +14,9 @@ export const Home = () => {
             </p>
             <img src={logoIntroUrl}  width="350" height="300" alt="Logo de la página" />
             <div className="d-flex m-4">
-        <Link to="/login">
-        <Button variant="primary" size="lg" className="m-2">Iniciar sesión</Button>
-        </Link>
-        <Link to="/signin">
-        <Button variant="primary" size="lg" className="m-2">Registrarse</Button>
-        </Link>
+            <Link to="/signin">
+              <Button variant="primary" size="lg" className="m-2">Registrarse</Button>
+            </Link>
       </div>
       </div>
     );
